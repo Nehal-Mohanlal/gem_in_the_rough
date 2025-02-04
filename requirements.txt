@@ -1,3 +1,4 @@
 requests 
 ollama 
 langchain-ollama 
+Flask
