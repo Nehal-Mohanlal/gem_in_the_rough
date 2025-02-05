@@ -34,8 +34,7 @@ class GabbyGemma:
         
   #   return response
 
-  def get_gemma_response(self): 
-    prompt = "hello" 
+  def get_gemma_response(self, prompt): 
     
     response = self.init_response(prompt) 
     return response 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}"> 
+    <title></title>
+</head>
+<body>
+    <div class="ctr_div">
+        <h1>What can I do for you?</h1>
+        <form method="post", action="/submit">
+            <input type="text", id="input", name="input", placeholder="Enter a prompt">
+            <input type="submit", value="go"> 
+        </form>
+    </div>
+    <div class="ctr_div">
+        <p>AI: {{prompt}}</p>
+    </div>
+</body>
+</html>
