@@ -14,8 +14,18 @@
             <input type="submit", value="go"> 
         </form>
     </div>
-    <div class="ctr_div">
-        <p>AI: {{prompt}}</p>
-    </div>
+    <div id="chat-box">
+        {% for msg in chat %}
+          {% if msg.sender == 'user' %}
+            <div class="message user"><strong>You:</strong> {{ msg.message }}</div>
+          {% else %}
+            <div class="message bot"><strong>Bot:</strong> {{ msg.message }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <a href="{{ url_for('clear_chat') }}" class="ctr_div">Clear Chat</a> 
+    
+
+    
 </body>
 </html>
